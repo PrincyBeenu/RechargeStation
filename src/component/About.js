@@ -1,4 +1,4 @@
-import React from 'react'
+import { React } from 'react';
 import { Link } from 'react-router-dom'
 import logor from './logor.png'
 import fb from './fb.png'
@@ -7,6 +7,7 @@ import x from './x.png'
 import youtube from './youtube.png'
 import whatsapp from './whatsapp.png'
 import logobig from './logobig.png'
+
 
 export const About = () => {
     return (
@@ -19,6 +20,7 @@ export const About = () => {
             <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
             {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
             <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
+            
         </div>
 
         <img className="h-80 w-42 absolute left-[36%]" src={logobig} alt="logo" />

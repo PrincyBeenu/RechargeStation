@@ -27,6 +27,7 @@ export const Rhome = () => {
         <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
         {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
         <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
+        <Link to='/Hub' className="text-lime-500 font-bold ml-10 underline">Hub</Link>
     </div>
 
     <img className="drop-shadow-lg h-72 w-80 absolute left-[30%]" src={tu33} alt="i1"/>

@@ -7,6 +7,7 @@ import { Contact } from './component/Contact'
 import { Rec } from './component/Rec'
 import { Signup } from './component/Signup'
 import { Done } from './component/Done'
+// import { Hub } from './component/Hub'
 
 function App() {
   return (
