@@ -60,16 +60,18 @@ export const Login = () => {
             <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE</Link>
             <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
             <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
-            {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
-            <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN HERE</Link>
+            <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link>
+            <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
         </div>
 
        {/*Hubspot Login form:  */}
-        <img className='absolute top-[22%] h-[100%] w-full' src={bg1} alt="img" />
+        <img className='absolute top-[18%] h-[105%] w-full' src={bg1} alt="img" />
         <div className='absolute top-[24%] left-[45%] text-indigo-900 font-extrabold text-4xl'>LOGIN</div>
-        <div id="hubspotForm" className='absolute top-[15%] left-[27%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 
+        <div id="hubspotForm" className='absolute top-[20%] left-[27%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 
         p-8 rounded-lg shadow-lg'>
     </div>
+
+    <Link to='/Signup' className='absolute top-[32%] left-[37%] underline text-indigo-900 font-bold'>do not have an account ? create new account</Link>
     
 
     <footer className="absolute top-[125%] bg-green-500 h-48 w-full text-indigo-700 font-bold text-center">
@@ -79,7 +81,7 @@ export const Login = () => {
     <Link to='https://twitter.com/?lang=en'><img src={x} alt="x" /></Link>
     <Link to='https://www.youtube.com/'><img src={youtube} alt="youtube" /></Link>
     <Link to='https://web.whatsapp.com/'><img src={whatsapp} alt="wapps" /></Link></div>
-    <p>heins road, chennai - 82<br/> 8189841883</p></div>
+    <p>heins road, chennai - 82<br/> 8188872752</p></div>
     </footer>
     </div>
     );

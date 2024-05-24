@@ -176,7 +176,7 @@ export const Rec = () => {
     <div className="bg-green-50 w-[100%] h-[1000px]">
         <img class="h-24 w-80" src={logor} alt="recharge station logo"/>
         <img className='absolute top-[20%] w-full' src={bg2} alt="img" />
-
+        <p className='absolute top-[23%] left-[41%] text-2xl text-white font-bold'>Recharge Here</p>
         <form className='absolute top-[15%] left-[25%] h-fit w-1/3 mt-24 mb-24 ml-24 mr-20 p-8 rounded-lg shadow-indigo-950 shadow-lg text-white font-bold' onSubmit={handleSubmit}>
             
         <div className="flex items-center"><label>Select Service:</label> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
@@ -246,7 +246,7 @@ export const Rec = () => {
             <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE</Link>
             <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
             <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
-            {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
+            <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link>
             <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
         </div>
 
@@ -257,10 +257,8 @@ export const Rec = () => {
     <Link to='https://twitter.com/?lang=en'><img src={x} alt="x" /></Link>
     <Link to='https://www.youtube.com/'><img src={youtube} alt="youtube" /></Link>
     <Link to='https://web.whatsapp.com/'><img src={whatsapp} alt="wapps" /></Link></div>
-    <p>heins road, chennai - 82<br/> 8189841883</p></div>
+    <p>heins road, chennai - 82<br/> 8188872752</p></div>
     </footer>
     </div>
     );
 }
-
-// changes 24 May 2024

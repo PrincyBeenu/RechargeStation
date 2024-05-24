@@ -25,10 +25,9 @@ export const Rhome = () => {
         <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE</Link>
         <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
         <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
-        {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
-        {/* changes on 24 May 2024 */}
+        <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link>
         <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
-        <Link to='/Hub' className="text-lime-500 font-bold ml-10 underline">Hub</Link>
+        {/* <Link to='/Hub' className="text-lime-500 font-bold ml-10 underline">Hub</Link> */}
     </div>
 
     <img className="drop-shadow-lg h-72 w-80 absolute left-[30%]" src={tu33} alt="i1"/>
@@ -62,7 +61,7 @@ export const Rhome = () => {
     <Link to='https://twitter.com/?lang=en'><img src={x} alt="x" /></Link>
     <Link to='https://www.youtube.com/'><img src={youtube} alt="youtube" /></Link>
     <Link to='https://web.whatsapp.com/'><img src={whatsapp} alt="wapps" /></Link></div>
-    <p>heins road, chennai - 82<br/> 8189841883</p></div>
+    <p>heins road, chennai - 82<br/> 8188872752</p></div>
     </footer>
 </div>
     );

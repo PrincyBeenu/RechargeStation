@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import logor from './logor.png'
 import fb from './fb.png'
@@ -10,79 +10,47 @@ import bg11 from './bg11.jpg'
 
 export const Signup = () => {
 
-    const initialVals = {uname: "", pword: "", conpword: "", number: "", mailid:""};
-    const [signupDetails, setSignupDetails] = useState(initialVals);
-    const [formErrors, setFormErrors] = useState({});
-    const [isSubmit, setIsSubmit] = useState({});
-
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setSignupDetails({...signupDetails, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setFormErrors(validate(signupDetails));
-        setIsSubmit(true);
-    };
-
     useEffect(() => {
-        console.log(formErrors)
-        if(Object.keys(formErrors).length === 0 && isSubmit)
-        {
-            console.log(signupDetails);
-        }
-    },[formErrors]);
     
-    const validate = (values) => {
-        const errors = {};
-
-        if(values.uname === "")
-        {
-            errors.uname = "*Username is required";
-        }
-
-        if(values.pword === "")
-        {
-            errors.pword = "*Password is required";
-        }
-
-        if(values.conpword === "")
-        {
-            errors.conpword = "*Confirm password is required";
-        }
+        const existingScript = document.querySelector(`script[src="//js.hsforms.net/forms/embed/v2.js"]`);
     
-        if(values.mailid === "")
-        {
-            errors.mailid = "*Email is required";
+        if (!existingScript) {
+          const script = document.createElement('script');
+          script.src = '//js.hsforms.net/forms/embed/v2.js';
+          script.type = 'text/javascript';
+          script.charset = 'utf-8';
+          script.async = true;
+    
+          script.onload = () => {
+            if (window.hbspt) {
+              window.hbspt.forms.create({
+                region: 'na1',
+                portalId: '46242536',
+                formId: '05067ee2-d30e-4202-b7d7-ac846c410a19',
+                target: '#hubspotForm'
+              });
+            }
+          };
+    
+          document.body.appendChild(script);
+        } else {
+          if (window.hbspt) {
+            window.hbspt.forms.create({
+              region: 'na1',
+              portalId: '46242536',
+              formId: '05067ee2-d30e-4202-b7d7-ac846c410a19',
+              target: '#hubspotForm'
+            });
+          }
         }
 
-        if(values.number === "")
-        {
-            errors.number = "*Phone number is required";
-        }
-
-        if(values.conpword !== values.pword)
-        {
-            errors.conpword = "*Password does not match";
-        }
-
-        if(values.pword.length >= 1 && values.pword.length <= 5)
-        {
-            errors.pword = "*Password should contains atleast 6 characters";
-        }
-
-        if(values.number.length !== 10)
-        {
-            errors.number = "*Phone number should contain 10 digits";
-        }
-
-        if (values.mailid && !values.mailid.includes('@')) {
-            errors.mailid = "*Email must contain '@' symbol";
-        }
-        return errors;
-        // alert("Signed In successful !");
-    }
+        return () => {
+            const formContainer = document.querySelector('#hubspotForm');
+            if (formContainer) {
+              formContainer.innerHTML = '';
+            }
+          };
+        }, []);
 
     return (
     <div className="bg-green-50 w-[100%] h-[980px]">
@@ -92,14 +60,20 @@ export const Signup = () => {
             <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE</Link>
             <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
             <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
-            {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
+            <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link>
             <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
         </div>
 
-    <img className='absolute top-[20%] h-[730px] w-full' src={bg11} alt="img" />
-    <div className='absolute top-[24%] left-[47%] text-indigo-900 font-extrabold text-4xl'>SIGN UP</div>
+    <img className='absolute top-[20%] h-[860px] w-full' src={bg11} alt="img" />
+    <div className='absolute top-[24%] left-[45%] text-indigo-900 font-extrabold text-4xl'>SIGN UP</div>
+    <Link to='/Login' className='absolute top-[32%] left-[37%] underline text-indigo-900 font-bold'>already have an account ? click here to login</Link>
 
-    <form className='absolute top-[15%] left-[30%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 p-8 rounded-lg shadow-lg' onSubmit={handleSubmit}>
+
+    <div id="hubspotForm" className='absolute top-[20%] left-[27%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 
+        p-8 rounded-lg shadow-lg'>
+    </div>
+
+    {/* <form className='absolute top-[15%] left-[30%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 p-8 rounded-lg shadow-lg' onSubmit={handleSubmit}>
     <label className='font-extrabold'>Username</label>
     <input className='w-11/12 py-2 px-3 border-transparent rounded box-border' type="text" id="uname" name="uname" placeholder='username' values = {signupDetails.uname} onChange = {handleChange} />
     <p className='text-red-500 font-bold'>{formErrors.uname}</p>
@@ -128,17 +102,17 @@ export const Signup = () => {
     <input className='font-extrabold w-11/12 bg-indigo-900 text-white text-1xl font-bold p-3 rounded ' type="submit" value="create account" /> 
     <br/><br/>
     <Link to='/Login' className='absolute left-[7%] text-indigo-900 font-bold'>already have an account ? click here to login</Link>
-    </form>
+    </form> */}
 
 
-    <footer className="absolute top-[154%] bg-green-500 h-48 w-full text-indigo-700 font-bold text-center">
+    <footer className="absolute top-[178%] bg-green-500 h-48 w-full text-indigo-700 font-bold text-center">
     <div className='my-12'><p>follow us on: </p>
     <div className="flex justify-center items-center space-x-4"><Link to='https://www.facebook.com/'><img src={fb} alt="fb" /></Link>
     <Link to='https://www.instagram.com/accounts/login/'><img src={insta} alt="ig" /></Link>
     <Link to='https://twitter.com/?lang=en'><img src={x} alt="x" /></Link>
     <Link to='https://www.youtube.com/'><img src={youtube} alt="youtube" /></Link>
     <Link to='https://web.whatsapp.com/'><img src={whatsapp} alt="wapps" /></Link></div>
-    <p>heins road, chennai - 82<br/> 8189841883</p></div>
+    <p>heins road, chennai - 82<br/> 8188872752</p></div>
     </footer>
     </div>
     );
