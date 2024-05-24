@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-// import { useState } from 'react-router-dom'
 import logor from './logor.png'
 import fb from './fb.png'
 import insta from './insta.png'
@@ -35,7 +34,6 @@ export const Login = () => {
     
           document.body.appendChild(script);
         } else {
-          // Script already exists, just create the form
           if (window.hbspt) {
             window.hbspt.forms.create({
               region: 'na1',

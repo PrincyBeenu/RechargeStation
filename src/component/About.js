@@ -8,7 +8,6 @@ import youtube from './youtube.png'
 import whatsapp from './whatsapp.png'
 import logobig from './logobig.png'
 
-
 export const About = () => {
     return (
     <div className="bg-green-50 w-[100%] h-[850px]">
