@@ -22,7 +22,7 @@ export const Rhome = () => {
     <img class="h-24 w-80" src={logor} alt="recharge station logo"/>
 
     <div className="absolute right-5 top-5 text-2xl">
-        <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE</Link>
+        <Link to='/Rec' className="text-lime-500 font-bold ml-10 underline">RECHARGE NOW</Link>
         <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
         <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
         {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
