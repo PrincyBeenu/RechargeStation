@@ -64,11 +64,11 @@ export const Login = () => {
             <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
         </div>
 
-        
-    <img className='absolute top-[22%] h-[100%] w-full' src={bg1} alt="img" />
-
+       {/*Hubspot Login form:  */}
+        <img className='absolute top-[22%] h-[100%] w-full' src={bg1} alt="img" />
         <div className='absolute top-[24%] left-[45%] text-indigo-900 font-extrabold text-4xl'>LOGIN</div>
-        <div id="hubspotForm" className='absolute top-[15%] left-[27%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 p-8 rounded-lg shadow-lg'>
+        <div id="hubspotForm" className='absolute top-[15%] left-[27%] h-fit w-96 mt-24 mb-24 ml-24 mr-24 
+        p-8 rounded-lg shadow-lg'>
     </div>
     
 

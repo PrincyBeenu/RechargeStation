@@ -26,6 +26,7 @@ export const Rhome = () => {
         <Link to='/Rhome' className="text-lime-500 font-bold ml-10 underline">HOME</Link>
         <Link to='/About' className="text-lime-500 font-bold ml-10 underline">ABOUT</Link>
         {/* <Link to='/Contact' className="text-lime-500 font-bold ml-10 underline">CONTACT</Link> */}
+        {/* changes on 24 May 2024 */}
         <Link to='/Login' className="text-lime-500 font-bold ml-10 underline">LOGIN</Link>
         <Link to='/Hub' className="text-lime-500 font-bold ml-10 underline">Hub</Link>
     </div>
